@@ -6,13 +6,64 @@ namespace week4class
     {
         static void Main(string[] args)
         {
-            int[] newInteger = {12,45,67,84,23};
-            foreach(var item in newInteger)
-            {
-               Console.WriteLine(item);   
-            }
-            paraMethod(12);
-            paraMethod(10,newInteger);
+
+            polymorphism parentclass = new polymorphism();
+            //polymorphism parent2 = new polymorphism.childClass(); //using parent class as a refrence
+            polymorphism.childClass childclass2 = new polymorphism.childClass(); //creating an object of the childclass from the pr
+            
+            // parentclass.parentMethod();
+            // childclass2.childClassMethod();
+            // childclass2.parentMethod();
+            
+
+            square mySquareObject = new square();
+            mySquareObject.shape();
+            mySquareObject.rectangle();
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Inheritance makes it possible for the child class to refrence the 
+            //parents class nd use the fields there.
+            Employee employeePte = new Employee.PartTimeEmployee();
+            Employee employeecte = new Employee.ContractEmployee();
+            
+            Employee.PartTimeEmployee pte = new Employee.PartTimeEmployee();
+            Employee.ContractEmployee cte = new Employee.ContractEmployee();
+            
+            employeePte.firstname = "Andrew";
+            employeePte.lastname = "Gabriel";
+            employeecte.lastname = "Osasyande";
+            employeecte.firstname = "Gabriel";
+            // employeePte.printFullName();
+            // employeecte.printFullName();
+
+            // int[] newInteger = {12,45,67,84,23};
+            // foreach(var item in newInteger)
+            // {
+            //    Console.WriteLine(item);   
+            // }
+            // paraMethod(12);
+            // paraMethod(10,newInteger);
             
             //paraMethod();
             
